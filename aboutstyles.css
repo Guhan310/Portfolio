@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+
+:root{
+    --bg-color:#fff;
+    --snd-bg-color:#d5fdf9;
+    --text-color:#000;
+    --main-color:#30cba2;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+/* Header Section code */
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    background: var(--main-color);
+    backdrop-filter: blur (10px);
+    transition: all 0.5s ease;
+}
+
+.logo{
+    font-size: 3rem;
+    color: var(--bg-color);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+}
+
+.navbar a{
+    font-size: 1.9rem;
+    color: var(--bg-color);
+    margin-left: 4rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--text-color);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+/* About Me Section */
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--snd-bg-color);
+    padding: 4rem 2rem;
+}
+
+.about-me h2 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    text-align: left;
+}
+
+.personal-details, .education-details {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.personal-details:hover, .education-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.personal-details h3, .education-details h3 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.personal-details ul, .education-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.personal-details li, .education-details li {
+    font-size: 1.6rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.personal-details li strong, .education-details li strong {
+    color: #333;
+}
+
+.about-summary {
+    margin-top: 3rem;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-summary h3 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.about-summary p {
+    font-size: 1.6rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Footer Section */
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--snd-bg-color);
+}
+
+.footer .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .social a {
+    font-size: 25px;
+    color: var(--main-color);
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--main-color);
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+
+.footer .social a:hover {
+    transform: scale(1.2) translateY(-10px);
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.footer .copyright{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--main-color);
+}
+
+/*Respnosive Design code*/
+
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+
+    .about-me{
+        padding: 3rem 2%;
+    }
+
+    .about-container{
+        gap: 1rem;
+    }
+
+    .personal-details, .education-details{
+        padding: 1.5rem;
+    }
+
+    .about-summary{
+        padding: 1.5rem;
+    }
+
+    .footer{
+        padding: 2rem 3%;
+    }
+}
